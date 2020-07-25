@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static 'generator/style.css' %}">
+	<title></title>
+</head>
+<body>
+<div id="form1">
+    <h1>Password Generator</h1>
+<form action="{% url 'password' %}" >
+   <select name="length" id=""> 
+       <option value="6">6</option>
+       <option value="7">7</option>
+       <option value="8">8</option>
+       <option value="9">9</option>
+       <option value="10" selected="selected">10</option>
+       <option value="11">11</option>
+       <option value="12">12</option>
+       <option value="13">13</option>
+       <option value="14">14</option>
+       <option value="15">15</option>
+
+   </select>  Length
+   <br>
+   <input type="checkbox" name="Uppercase" id="">  Uppercase
+   <br>
+   <input type="checkbox" name="Numbers" id="">  Numbers
+   <br>
+   <input type="checkbox" name="Special" id="">  Special Characters
+   <br>
+   <input type="submit" value="Generate Password" id="btn">
+
+</form>
+</div>
+</body>
+</html>
